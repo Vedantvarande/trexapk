@@ -9,7 +9,7 @@ var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
 var score=0;
-
+var touches;
 var gameOver, restart;
 
 localStorage["HighestScore"] = 0;
@@ -84,6 +84,7 @@ function draw() {
     if((touches.lenght > 0 || keyDown("space") && trex.y >=height-660))
     {
       trex.velocityY = -10;
+      touches = [];
     }
   
     trex.velocityY = trex.velocityY + 0.8
